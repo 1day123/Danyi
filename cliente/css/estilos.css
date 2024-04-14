@@ -1,0 +1,254 @@
+/*------------------------------------------------FRAMEWORK DAYRA--------------------------------------------------*/
+body,
+html {
+  /*elimino cualquier estilo que tenga 
+    el navegador por defecto*/
+  margin: 0;
+  padding: 0;
+  font-family: "Geneva", sans-serif;
+}
+header {
+  height: 370px;
+ 
+}
+/********Contenedores********************/
+.container-g {
+  height: 100vh;
+  width: 100vw;
+}
+.container-m {
+  height: 75vh;
+  width: 75vw;
+}
+.container-c {
+  height: 50vh;
+  width: 50vw;
+}
+.container-s {
+  height: 30vh;
+  width: 30vw;
+}
+
+/************display*******/
+.display-f {
+  display: flex;
+}
+.display-b {
+  display: block;
+}
+.display-i-b {
+  display: inline-block;
+}
+/********overflow********************/
+.overflow-y-a {
+  overflow-y: auto;
+}
+.overflow-x-a {
+  overflow-x: auto;
+}
+.overflow-h {
+  overflow: hidden;
+}
+.overflow-y-h {
+  overflow-y: hidden;
+}
+.overflow-x-h {
+  overflow-x: hidden;
+}
+/********posiciones****************/
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*La clase top-rigth nos ayuda a posicionar los elementos a la
+derecha de la parte superior de nuestro contenedor*/
+.top-rigth {
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+}
+/*Esta clase hace que nuestro menu de navegacion se ubique a la derecha y manenga 
+un espacio con el logo gracias al space-between, tiene una separacion de su contorno 
+gracias a su pading de 10px  y los elementos se colocan uno a lado de otro gracias
+al display/flex*/
+.justify-rigth {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.margin-top-20 {
+  margin-top: 20vh;
+}
+.margin-top-10 {
+  margin-top: 10vh;
+}
+.margin-top-5 {
+  margin-top: 5vh;
+}
+.margin-top-3 {
+  margin-top: 3vh;
+}
+
+.left-top {
+  left: 0;
+  top: 0;
+}
+
+.right-top {
+  right: 0;
+  top: 0;
+}
+
+.margin-b {
+  margin-bottom: 20px;
+}
+
+/********contornos****************/
+.radius {
+  border-radius: 20px;
+}
+.box-sombra {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/********texto****************/
+.txt-g {
+  font-size: 7rem;
+}
+.txt-m {
+  font-size: 4rem;
+}
+.txt-c {
+  font-size: 1.5rem;
+}
+.txt-s {
+  font-size: 1rem;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-blanco {
+  color: aliceblue;
+}
+.txt-negro {
+  color: black;
+}
+
+.txt-sombra {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.txt-n {
+  font-weight: bold;
+}
+.txt-ligth {
+  font-weight: lighter;
+}
+.txt-decoration {
+  text-decoration: none;
+}
+/*La clase text nav nos ayuda a darle estilo a nuestros texto de los menus nav*/
+.text-nav {
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+}
+.text-nav:hover {
+  color: aliceblue;
+  transform: scale(1.1);
+}
+/********Botones**************/
+.btn-eg {
+  height: 85px;
+  width: 260px;
+  font-size: 2.3rem;
+}
+.btn-g {
+  height: 55px;
+  width: 205px;
+}
+.btn-m {
+  height: 35px;
+  width: 125px;
+}
+.btn-c {
+  height: 25px;
+  width: 95px;
+}
+
+.background-rojo {
+  background-color: rgb(194, 57, 15);
+}
+.background-verde {
+  background-color: rgb(15, 194, 96);
+}
+.background-rosa {
+  background-color: rgb(186, 16, 192);
+}
+.background-negro {
+  background-color: rgb(0, 0, 0);
+}
+.background-gris {
+  background-color: rgb(128, 128, 128);
+}
+.background-azul {
+  background-color: rgb(15, 63, 194);
+}
+
+/**********************clases video***************************************************************************************************/
+/*En esta clase logramos que nuestro video cubra 100%toda la pantalla
+de nuestro contenedor, podemos reutilizar el codigo para crear nuevas
+interfaces que necesiten un video de fondo- es importante mencionar
+que nuestro contenedor padre necesita un overflow hiddden que lo 
+encontramos en la clase.overflow-h en este framework para cortar los 
+exedentes que pueda tener nuestro video*/
+.fondo {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+/*----------logo----------------*/
+#logo {
+  height: 20vh;
+}
+#text-Dulces-index {
+  margin-top: 5vh;
+ 
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#text-sub-index {
+  margin-top: 20vh;
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#btn-comenzar-index{
+  margin-top: 30vh;
+
+}
+.left{
+  left: 60px;
+}
+#contenedor-registro{
+margin-left: 25%;
+top: 28vh;
+background-color: rgba(240, 255, 255, 0.637);
+}
+
