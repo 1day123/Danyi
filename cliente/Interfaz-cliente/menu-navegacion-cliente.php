@@ -12,23 +12,24 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
+<body class="overflow-h">
     <div class="container-fluid ">
 
-        <header class="relative justify-rigth">
-            <div>
-                <img src="../img/logo-principal.png" alt="" id="logo">
-            </div>
-
+        <header class="separar-extremos">
+            <!-- logo de la pagina -->
+            <img src="../img/logo-principal.png" alt="Dulceria Danyi logo" id="logo">
+            <!-- menu de navegacion-->
             <nav class="nav navbar-expand-lg ">
-                <a class="nav-link text-nav">Inicio</a>
-                <a class="nav-link text-nav">Categorias</a>
-                <a class="nav-link text-nav">Mis compras</a>
-                <a class="nav-link text-nav">Buscar</a>
-                <a class="nav-link text-nav">🛒</a>
-                <a class="nav-link text-nav" href="../../index.php">Salir</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s">Inicio</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s">Categorias</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s">Mis compras</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s">Buscar</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s">🛒</a>
+                <a class="nav-link a-color-blanco btn-hover txt-c center top-s" href="../../index.php">Salir</a>
             </nav>
         </header>
+
+
 
     </div>
 

@@ -14,15 +14,18 @@
 </head>
 
 <body>
-   <div class="container-fluid">
-    <video muted autoplay loop class="fondo">
+    <div class="container-fluid">
+        <video muted autoplay loop class="fondo">
             <source src="../videos/video-inicio.mp4" type="video/mp4">
         </video>
+        <?php
+        include("menu-navegacion-cliente.php");
+        ?>
 
 
 
 
-   </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->

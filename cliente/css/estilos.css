@@ -5,41 +5,24 @@ html {
     el navegador por defecto*/
   margin: 0;
   padding: 0;
-  font-family: "Geneva", sans-serif;
-}
-header {
-  height: 370px;
- 
-}
-/********Contenedores********************/
-.container-g {
-  height: 100vh;
-  width: 100vw;
-}
-.container-m {
-  height: 75vh;
-  width: 75vw;
-}
-.container-c {
-  height: 50vh;
-  width: 50vw;
-}
-.container-s {
-  height: 30vh;
-  width: 30vw;
+  font-family: "Arial Narrow Bold", sans-serif;
 }
 
-/************display*******/
-.display-f {
-  display: flex;
-}
-.display-b {
-  display: block;
-}
-.display-i-b {
-  display: inline-block;
-}
-/********overflow********************/
+/*el overflow nos ayuda a controlar los scroll de nuestra pantalla.
+overflow-y se refiere al scroll vertical y el overflow-x se refiere
+al scroll horizontal. Cuando mensionamos hidden decimos que el 
+scroll desaparezca, y cuando lo ponemos en auto ayuda a que el 
+scroll  si el contenido del contenedor es más grande que el tamaño del 
+contenedor en sí, se agregarán barras de desplazamiento (scroll Y y X)
+según sea necesario para permitir al usuario desplazarse y ver el contenido completo
+
+.overflow-y-a : scroll-y automatico
+.overflow-x-a : scroll-x automatico
+.overflow-h   : scroll X y Y desaparezcan
+.overflow-y-h : scroll Y desaparezca
+.overflow-x-h : scroll X desaparezca
+
+*/
 .overflow-y-a {
   overflow-y: auto;
 }
@@ -70,7 +53,7 @@ header {
 
 /*La clase top-rigth nos ayuda a posicionar los elementos a la
 derecha de la parte superior de nuestro contenedor*/
-.top-rigth {
+.elemetos-derecha {
   display: flex;
   justify-content: flex-end;
   top: 0;
@@ -79,23 +62,41 @@ derecha de la parte superior de nuestro contenedor*/
 un espacio con el logo gracias al space-between, tiene una separacion de su contorno 
 gracias a su pading de 10px  y los elementos se colocan uno a lado de otro gracias
 al display/flex*/
-.justify-rigth {
+.separar-extremos {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+}
+/*espacio left nos ayuda agregar un margen izquierdo de
+ nuestro contenedor padre */
+.espacio-left-g {
+  margin-left: 200px;
+}
+.espacio-left-m {
+  margin-left: 150px;
+}
+.espacio-left-c {
+  margin-left: 80px;
+}
+@media (max-width: 500px) {
+  .espacio-left-c {
+    margin-left: 0px;
+  }
+}
+.espacio-left-xc {
+  margin-left: 10px;
 }
 
-.margin-top-20 {
-  margin-top: 20vh;
+.espacio-rigth-g {
+  margin-right: 200px;
 }
-.margin-top-10 {
-  margin-top: 10vh;
+.espacio-right-m {
+  margin-right: 150px;
 }
-.margin-top-5 {
-  margin-top: 5vh;
+.espacio-right-c {
+  margin-right: 80px;
 }
-.margin-top-3 {
-  margin-top: 3vh;
+.espacio-right-xc {
+  margin-right: 10px;
 }
 
 .left-top {
@@ -108,10 +109,12 @@ al display/flex*/
   top: 0;
 }
 
-.margin-b {
-  margin-bottom: 20px;
+.top-c {
+  margin-top: 30px;
 }
-
+.top-s {
+  margin-top: -30px;
+}
 /********contornos****************/
 .radius {
   border-radius: 20px;
@@ -127,7 +130,7 @@ al display/flex*/
   font-size: 4rem;
 }
 .txt-c {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 .txt-s {
   font-size: 1rem;
@@ -154,22 +157,33 @@ al display/flex*/
 .txt-decoration {
   text-decoration: none;
 }
-/*La clase text nav nos ayuda a darle estilo a nuestros texto de los menus nav*/
-.text-nav {
+
+/*La clase a-color-blanco le da a los textos un estilo por 
+defecto blanco esta clase nos ayunda a los enlaces ya que 
+quita su color azul que tienen por defecto los links*/
+.a-color-blanco {
   cursor: pointer;
   color: aliceblue;
-  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   border: none;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease;
 }
-.text-nav:hover {
+
+.a-color-blanco:hover {
   color: aliceblue;
-  transform: scale(1.1);
 }
-/********Botones**************/
+/*Esta clase nos ayuda a darle el contorno y forma al boton
+rojo tradicional*/
+.btn-rojo {
+  background-color: rgb(194, 57, 15);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  color: aliceblue;
+  font-weight: bold;
+  border: none;
+}
 .btn-eg {
   height: 85px;
   width: 260px;
@@ -178,7 +192,9 @@ al display/flex*/
 .btn-g {
   height: 55px;
   width: 205px;
+  font-size: 1.5rem;
 }
+
 .btn-m {
   height: 35px;
   width: 125px;
@@ -187,6 +203,18 @@ al display/flex*/
   height: 25px;
   width: 95px;
 }
+
+/*btn-hover es una clase que hace que el elemento
+ sufra un cambio de tamaño al pasar el cursor por 
+ el elemento y tiene a crecer en una escala de 1.1*/
+.btn-hover {
+  transition: 0.3s ease;
+}
+.btn-hover:hover {
+  transform: scale(1.1);
+}
+
+/****colores*****/
 
 .background-rojo {
   background-color: rgb(194, 57, 15);
@@ -207,48 +235,94 @@ al display/flex*/
   background-color: rgb(15, 63, 194);
 }
 
-/**********************clases video***************************************************************************************************/
-/*En esta clase logramos que nuestro video cubra 100%toda la pantalla
+/***clase para el fondo de cualquier pantalla**********/
+/*En esta clase logramos que nuestro fondo cubra 100%toda la pantalla
 de nuestro contenedor, podemos reutilizar el codigo para crear nuevas
-interfaces que necesiten un video de fondo- es importante mencionar
+interfaces que necesiten un video de fondo o una imagen- es importante mencionar
 que nuestro contenedor padre necesita un overflow hiddden que lo 
-encontramos en la clase.overflow-h en este framework para cortar los 
-exedentes que pueda tener nuestro video*/
+encontramos en la clase.overflow-h o un mejor hack es que nuestro body contenga 
+el overflow-h y asi se controlara los scroll*/
 .fondo {
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
   object-fit: cover;
+  z-index: -1;
 }
 
 /*----------logo----------------*/
 #logo {
-  height: 20vh;
+  height: 18vh;
+  width: auto;
 }
+
 #text-Dulces-index {
-  margin-top: 5vh;
- 
+  margin-top: 100px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 #text-sub-index {
-  margin-top: 20vh;
-  
+  margin-top: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-#btn-comenzar-index{
-  margin-top: 30vh;
 
-}
-.left{
-  left: 60px;
-}
-#contenedor-registro{
-margin-left: 25%;
-top: 28vh;
-background-color: rgba(240, 255, 255, 0.637);
+#btn-comenzar-index {
+  margin-top: 20px;
 }
 
+#contenedor-registro {
+  margin-left: 25%;
+
+  background-color: rgba(240, 255, 255, 0.637);
+}
+/*media query esuna forma de hacer responsive nuestro sitio web,
+son condiciones que cambian los etilos de nuestros componentes
+dependiendo del ancho de nuestra pantalla, como una especie de if*/
+@media (max-width:500px){
+  /*modificamos el boton comenzar a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  .btn-eg {
+    height: 60px;
+    width: 150px;
+    font-size: 1.6rem;
+  }
+   /*modificamos el boton registrar a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  .btn-g {
+    height: 40px;
+    width: 120px;
+    font-size: 1rem;
+  }
+   /*modificamos el logo a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #logo {
+    height: 13vh;
+    width: auto;
+  }
+   /*modificamos el primer texto a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #text-Dulces-index {
+    font-size: 3.5rem;
+    margin-top: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  /*modificamos el segundo texto a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #text-sub-index {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+ 
+}
+@media(max-width:500px){
+ 
+ .txt-c {
+  font-size: 1rem;
+}
+
+}

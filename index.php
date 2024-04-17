@@ -12,28 +12,27 @@
     <title>Hello, world!</title>
 </head>
 
-<body>
-
-
+<body class="overflow-h">
+    <!-- video del fondo -->
+    <video muted autoplay loop class="fondo">
+        <source src="./cliente/videos/video-index.mp4" type="video/mp4">
+    </video>
     <div class="container-fluid">
-
-        <video muted autoplay loop class="fondo">
-            <source src="./cliente/videos/video-index.mp4" type="video/mp4">
-        </video>
-
-        <header class="relative justify-rigth">
-            <div>
-                <img src="Cliente/img/logo-principal.png" alt="" id="logo">
-            </div>
-            <nav class="nav navbar-expand-lg margin-top-3">
-                <a class="nav-link text-nav btn-g background-rojo radius center" href="cliente/Interfaz-cliente/menu-navegacion-cliente.php">Registrarse</a>
+        <!-- encabezado del index -->
+        <header class="separar-extremos">
+            <!-- logo de la pagina -->
+            <img src="Cliente/img/logo-principal.png" alt="Dulceria Danyi logo" id="logo">
+            <!-- menu de navegacion-->
+            <nav class="nav navbar-expand-lg ">
+                <a class="a-color-blanco btn-hover btn-rojo btn-g center top-c" href="cliente/Interfaz-cliente/menu-navegacion-cliente.php">Registrarse</a>
             </nav>
         </header>
-        <div>
-            <h1 id="text-Dulces-index" class="absolute txt-blanco txt-g left">Dulces de México</h1>
-            <h4 id="text-sub-index" class="absolute txt-blanco txt-m left">Descubre la magia del dulce en cada mordisco!</h4>
-            <button id="btn-comenzar-index" class=" absolute text-nav btn-eg background-rojo radius center left">Comenzar</button>
-        </div>
+        <!--Titulo - subtitulo del index - boton comenzar-->
+        <main class="espacio-left-c ">
+            <h1 id="text-Dulces-index" class="txt-blanco txt-g ">Dulces de México</h1>
+            <h4 id="text-sub-index" class="txt-blanco txt-m">Descubre la magia del dulce en cada mordisco!</h4>
+            <a id="btn-comenzar-index" class="a-color-blanco btn-hover btn-rojo btn-eg center top-c" href="cliente/Interfaz-cliente/inicio.php">Comenzar</a>
+            </main>
 
     </div>
 
