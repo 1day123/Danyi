@@ -23,21 +23,11 @@ según sea necesario para permitir al usuario desplazarse y ver el contenido com
 .overflow-x-h : scroll X desaparezca
 
 */
-.overflow-y-a {
-  overflow-y: auto;
-}
-.overflow-x-a {
-  overflow-x: auto;
-}
+
 .overflow-h {
   overflow: hidden;
 }
-.overflow-y-h {
-  overflow-y: hidden;
-}
-.overflow-x-h {
-  overflow-x: hidden;
-}
+
 /********posiciones****************/
 .absolute {
   position: absolute;
@@ -109,6 +99,12 @@ al display/flex*/
   top: 0;
 }
 
+.top-g {
+  margin-top: 180px;
+}
+.top-m {
+  margin-top: 60px;
+}
 .top-c {
   margin-top: 30px;
 }
@@ -282,7 +278,7 @@ el overflow-h y asi se controlara los scroll*/
 /*media query esuna forma de hacer responsive nuestro sitio web,
 son condiciones que cambian los etilos de nuestros componentes
 dependiendo del ancho de nuestra pantalla, como una especie de if*/
-@media (max-width:500px){
+@media (max-width: 500px) {
   /*modificamos el boton comenzar a un tamaño mas pequeño
   y adaptable para un telefono movil*/
   .btn-eg {
@@ -290,20 +286,20 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
     width: 150px;
     font-size: 1.6rem;
   }
-   /*modificamos el boton registrar a un tamaño mas pequeño
+  /*modificamos el boton registrar a un tamaño mas pequeño
   y adaptable para un telefono movil*/
   .btn-g {
     height: 40px;
     width: 120px;
     font-size: 1rem;
   }
-   /*modificamos el logo a un tamaño mas pequeño
+  /*modificamos el logo a un tamaño mas pequeño
   y adaptable para un telefono movil*/
   #logo {
     height: 13vh;
     width: auto;
   }
-   /*modificamos el primer texto a un tamaño mas pequeño
+  /*modificamos el primer texto a un tamaño mas pequeño
   y adaptable para un telefono movil*/
   #text-Dulces-index {
     font-size: 3.5rem;
@@ -317,12 +313,121 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
     margin-top: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
- 
 }
-@media(max-width:500px){
- 
- .txt-c {
-  font-size: 1rem;
+@media (max-width: 500px) {
+  .txt-c {
+    font-size: 1rem;
+  }
 }
 
+/**************************************/
+/**Clases para las cards de categorias**/
+/**************************************/
+.contenedor-cards {
+  display: flex; /*pone las cards en linea osea uno a lado del otro*/
+  width: 49.5vw;
+  height: 30vh;
+  margin-left: 40px;
+  overflow-y: hidden;
+}
+
+.card-categorias {
+  position: relative;
+  margin-right: 10px; /*espacio entre las cards*/
+}
+
+.imagen-categorias {
+  object-fit: cover; /*cubre toda la imagen y la centra*/
+  width: 180px; /*ancho de la card*/
+  height: 280px; /*alto de la card*/
+}
+.texto-categorias {
+  position: absolute;
+  width: 158px; /*ancho del fondo del texto*/
+  height: auto; /*alto del fondo del texto*/
+  font-size: 2rem;
+  left: 10px;
+  top: 10px;
+  color: aliceblue;
+  background-color: #ffffffb6;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.ver-categorias {
+  position: absolute;
+  right: 15px;
+  bottom: 40px;
+  font-size: 1.3rem;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #e4007c;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+.ver-categorias:hover {
+  transform: scale(1.1);
+}
+
+/**************************************/
+/**Clases para las cards de productos**/
+/**************************************/
+.contenedor-productos {
+  display: flex;
+  width: 80vw;
+  height: 90vh;
+  flex-wrap: wrap;
+}
+.formulario-producto {
+  position: relative;
+  margin-top: 20vh;
+  margin-left: 30px;
+}
+.imagen-producto {
+  object-fit: cover; /*cubre toda la imagen y la centra*/
+  width: 300px; /*ancho de la card*/
+  height: 550px; /*alto de la card*/
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+.imagen-producto:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.nombre-producto {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0.5);
+}
+
+.descripcion-producto {
+  position: absolute;
+  left: 20px;
+  top: 300px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.stock-producto {
+  position: absolute;
+  left: 20px;
+  top: 450px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.btn-agregar-producto {
+  position: absolute;
+  height: auto;
+  width: 60px;
+  top: 465px;
+  right: 20px;
+  transition: 0.3s ease;
+}
+.btn-agregar-producto:hover {
+  transform: scale(1.5);
+  background-color: #e4007c;
+  border-radius: 100%;
 }

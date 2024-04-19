@@ -15,18 +15,17 @@
 
 <body>
     <div class="container-fluid">
-        <video muted autoplay loop class="fondo">
-            <source src="../videos/video-inicio.mp4" type="video/mp4">
-        </video>
-        <?php
-        include("menu-navegacion-cliente.php");
-        ?>
-
-
-
-
+        <!-- video del fondo-inicio -->
+        <img src="../videos/fondo-inicio.jpg" class="fondo" alt="">
+        <!-- menu del inicio-cliente -->
+        <?php include("menu-navegacion-cliente.php"); ?>
+        <!-- categorias -->
+        <div  class="contenedor-cards top-g">
+            <?php include("../componentesPHP/categorias.php");?>           
+        </div>
     </div>
 
+    
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
