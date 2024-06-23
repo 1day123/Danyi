@@ -16,6 +16,7 @@
                         <input type='hidden' value='$id_categoria' name='id_categoria'>
                         <button type='submit' class='ver-categorias radius btn-g'> Ver productos</button>
                      </form>";
+                     
                 }
             } else {
                 echo "te fallo master";
