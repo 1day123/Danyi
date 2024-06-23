@@ -1,5 +1,5 @@
 <?php
-include("../Servidor/Conexion.php");
+include("../../servidor/Conexion.php");
 $id = $_SESSION['usuario']; 
 /*consulta para mostrar el nombre del tipo de usuario dependiendo de su id_usuario*/
 $consulta2 = "SELECT u.id_usuario,

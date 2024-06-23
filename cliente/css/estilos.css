@@ -8,6 +8,60 @@ html {
   font-family: "Arial Narrow Bold", sans-serif;
 }
 
+
+/*esta clase nos ayuda a darle una sombra a nuestro fondo
+agregando un div abajo de nuestro fondo con la clase sombra*/
+.sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.219
+  ); 
+}
+.sombra-inicio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(to right, #161313dc, #7e0940bd);
+}
+
+#barramenu {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  width: 0;
+  right: 0;
+  top: 0;
+  background-color: #61363acb;
+  z-index: 3;
+  transition: 0.6s ease;
+}
+#btncerrarcarrito {
+  cursor: pointer;
+}
+
+/*Estilos para los titulos principales*/
+.titulo {
+  position: absolute;
+  margin-top: 5vh;
+  margin-left: 80px;
+  color: aliceblue;
+  font-size: 5rem;
+  font-family: Impact, Haettenschweiler, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /*el overflow nos ayuda a controlar los scroll de nuestra pantalla.
 overflow-y se refiere al scroll vertical y el overflow-x se refiere
 al scroll horizontal. Cuando mensionamos hidden decimos que el 
@@ -27,6 +81,9 @@ según sea necesario para permitir al usuario desplazarse y ver el contenido com
 .overflow-h {
   overflow: hidden;
 }
+.overflow-y-a {
+  overflow-y: auto;
+}
 
 /********posiciones****************/
 .absolute {
@@ -35,7 +92,7 @@ según sea necesario para permitir al usuario desplazarse y ver el contenido com
 .relative {
   position: relative;
 }
-.center {
+.centrar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,11 +123,6 @@ al display/flex*/
 }
 .espacio-left-c {
   margin-left: 80px;
-}
-@media (max-width: 500px) {
-  .espacio-left-c {
-    margin-left: 0px;
-  }
 }
 .espacio-left-xc {
   margin-left: 10px;
@@ -109,14 +161,17 @@ al display/flex*/
   margin-top: 30px;
 }
 .top-s {
-  margin-top: -30px;
+  margin-top: 5px;
 }
 /********contornos****************/
 .radius {
   border-radius: 20px;
 }
-.box-sombra {
+.box-sombra-negro {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.box-sombra-blanco {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
 }
 /********texto****************/
 .txt-g {
@@ -126,10 +181,10 @@ al display/flex*/
   font-size: 4rem;
 }
 .txt-c {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .txt-s {
-  font-size: 1rem;
+  font-size: 1.7rem;
 }
 .txt-center {
   text-align: center;
@@ -160,7 +215,6 @@ quita su color azul que tienen por defecto los links*/
 .a-color-blanco {
   cursor: pointer;
   color: aliceblue;
-  font-weight: bold;
   text-decoration: none;
   border: none;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -248,115 +302,52 @@ el overflow-h y asi se controlara los scroll*/
   object-fit: cover;
   z-index: -1;
 }
-
-/*----------logo----------------*/
-#logo {
-  height: 18vh;
-  width: auto;
+/*esta clase nos ayuda a darle un tamaño estandar a los iconos de la pagina*/
+.icono {
+  height: 40px;
 }
-
-#text-Dulces-index {
-  margin-top: 100px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#text-sub-index {
-  margin-top: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#btn-comenzar-index {
-  margin-top: 20px;
-}
-
-#contenedor-registro {
-  margin-left: 25%;
-
-  background-color: rgba(240, 255, 255, 0.637);
-}
-/*media query esuna forma de hacer responsive nuestro sitio web,
-son condiciones que cambian los etilos de nuestros componentes
-dependiendo del ancho de nuestra pantalla, como una especie de if*/
-@media (max-width: 500px) {
-  /*modificamos el boton comenzar a un tamaño mas pequeño
-  y adaptable para un telefono movil*/
-  .btn-eg {
-    height: 60px;
-    width: 150px;
-    font-size: 1.6rem;
-  }
-  /*modificamos el boton registrar a un tamaño mas pequeño
-  y adaptable para un telefono movil*/
-  .btn-g {
-    height: 40px;
-    width: 120px;
-    font-size: 1rem;
-  }
-  /*modificamos el logo a un tamaño mas pequeño
-  y adaptable para un telefono movil*/
-  #logo {
-    height: 13vh;
-    width: auto;
-  }
-  /*modificamos el primer texto a un tamaño mas pequeño
-  y adaptable para un telefono movil*/
-  #text-Dulces-index {
-    font-size: 3.5rem;
-    margin-top: 100px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  /*modificamos el segundo texto a un tamaño mas pequeño
-  y adaptable para un telefono movil*/
-  #text-sub-index {
-    font-size: 2rem;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-}
-@media (max-width: 500px) {
-  .txt-c {
-    font-size: 1rem;
-  }
-}
-
+/***********************************************termina el framework dayra****************************************/
 /**************************************/
 /**Clases para las cards de categorias**/
 /**************************************/
 .contenedor-cards {
   display: flex; /*pone las cards en linea osea uno a lado del otro*/
-  width: 49.5vw;
-  height: 30vh;
-  margin-left: 40px;
+  width: 96vw;
+  height: 80vh;
   overflow-y: hidden;
 }
 
 .card-categorias {
   position: relative;
-  margin-right: 10px; /*espacio entre las cards*/
+  margin-top: 20vh;
+  margin-left: 30px;
 }
 
 .imagen-categorias {
   object-fit: cover; /*cubre toda la imagen y la centra*/
-  width: 180px; /*ancho de la card*/
-  height: 280px; /*alto de la card*/
+  width: 300px; /*ancho de la card*/
+  height: 550px; /*alto de la card*/
+  transition: 0.3s ease;
+}
+.imagen-categorias:hover {
+  transform: scale(1.1);
 }
 .texto-categorias {
   position: absolute;
   width: 158px; /*ancho del fondo del texto*/
   height: auto; /*alto del fondo del texto*/
-  font-size: 2rem;
-  left: 10px;
   top: 10px;
-  color: aliceblue;
+  left: 20px;
+  font-size: 2.5rem;
+  color: #ffffff;
   background-color: #ffffffb6;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgb(0, 0, 0.5);
 }
 .ver-categorias {
   position: absolute;
-  right: 15px;
+  right: 50px;
   bottom: 40px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   border: none;
   font-weight: bold;
   color: #ffffff;
@@ -372,10 +363,10 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
 /**Clases para las cards de productos**/
 /**************************************/
 .contenedor-productos {
-  display: flex;
-  width: 80vw;
-  height: 90vh;
-  flex-wrap: wrap;
+  display: flex; /*pone las cards en linea osea uno a lado del otro*/
+  width: 96vw;
+  height: 80vh;
+  overflow-y: hidden;
 }
 .formulario-producto {
   position: relative;
@@ -386,11 +377,10 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
   object-fit: cover; /*cubre toda la imagen y la centra*/
   width: 300px; /*ancho de la card*/
   height: 550px; /*alto de la card*/
-  opacity: 0.6;
+
   transition: 0.3s ease;
 }
 .imagen-producto:hover {
-  opacity: 1;
   transform: scale(1.1);
 }
 .nombre-producto {
@@ -430,4 +420,326 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
   transform: scale(1.5);
   background-color: #e4007c;
   border-radius: 100%;
+}
+
+/********Formularios***********/
+.cuadro-formulario-g {
+  height: 700px;
+  width: 900px;
+  background-color: #332d2dc7;
+}
+
+.cuadro-formulario-m {
+  height: 700px;
+  width: 600px;
+  background-color: #332d2dc7;
+}
+.cuadro-formulario-C {
+  height: 500px;
+  width: 600px;
+  background-color: #332d2dc7;
+}
+.formulario {
+  margin-top: 15vh; /*margin top que baja todos los label y los input*/
+  margin-left: 40px;
+  color: #ffffff;
+}
+.formulario label {
+  display: block; /* Hace que cada label ocupe una línea completa */
+  margin-bottom: 5px; /* Espacio entre el label y el input */
+  margin-top: 2vh; /**espacio entre cada label del input de arriba*/
+}
+input {
+  height: 40px;
+  width: 250px;
+  font-size: 1.4rem;
+  border: none;
+}
+/*----------logo----------------*/
+#logo {
+  height: 18vh;
+  width: auto;
+}
+
+#text-Dulces-index {
+  margin-top: 100px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#text-sub-index {
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#btn-comenzar-index {
+  margin-top: 20px;
+}
+
+/*media query esuna forma de hacer responsive nuestro sitio web,
+son condiciones que cambian los etilos de nuestros componentes
+dependiendo del ancho de nuestra pantalla, como una especie de if*/
+@media (max-width: 500px) {
+  /*modificamos el boton comenzar a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  .btn-eg {
+    height: 60px;
+    width: 150px;
+    font-size: 1.6rem;
+  }
+  /*modificamos el boton registrar a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  .btn-g {
+    height: 40px;
+    width: 120px;
+    font-size: 1rem;
+  }
+  /*modificamos el logo a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #logo {
+    height: 13vh;
+    width: auto;
+  }
+  /*modificamos el primer texto a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #text-Dulces-index {
+    font-size: 3.5rem;
+    margin-top: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  /*modificamos el segundo texto a un tamaño mas pequeño
+  y adaptable para un telefono movil*/
+  #text-sub-index {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .espacio-left-c {
+    margin-left: 0px;
+  }
+  .txt-c {
+    font-size: 1rem;
+  }
+}
+
+#avatar {
+  position: absolute;
+  height: auto;
+  width: 300px;
+}
+.avatar-usuario {
+  top: 150px;
+  right: 0px;
+}
+#btn-registrar {
+  position: absolute;
+  top: 500px;
+  right: 40px;
+}
+.avatar-categoria {
+  top: 130px;
+  right: 0px;
+}
+.recuperar-recordar {
+  margin-top: 5vh;
+  margin-left: 40px;
+}
+.avatar-autenticar {
+  top: 200px;
+  right: 0px;
+}
+#btn-autenticar {
+  position: absolute;
+  top: 500px;
+  left: 60px;
+}
+#btn-registrar-categoria {
+  position: absolute;
+  top: 380px;
+  left: 60px;
+}
+#btn-registrar-repartidores {
+  position: absolute;
+  top: 600px;
+  left: 65px;
+}
+.avatar-repartidor {
+  top: 350px;
+  right: 0px;
+}
+#btn-registrar-proveedores {
+  position: absolute;
+  top: 500px;
+  right: 350px;
+}
+.avatar-proveedores {
+  top: 200px;
+  right: 0px;
+}
+
+#titulo-formulario {
+  position: absolute;
+  top: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.select-repartidor {
+  margin-top: 1vh;
+  height: 40px;
+  width: 270px;
+  font-size: 1.4rem;
+}
+.select-productos {
+  margin-top: 3vh;
+  height: 40px;
+  width: 270px;
+  font-size: 1.4rem;
+}
+.select-categorias {
+  margin-top: 3vh;
+  height: 40px;
+  width: 270px;
+  font-size: 1rem;
+}
+
+/*clases para mi menu navegacion*/
+.menu-nav {
+  margin-left: 20px;
+}
+.nav {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+.btn-buscar {
+  background-color: #770c0c00;
+  border: none;
+}
+.imagen-inicio {
+  position: absolute;
+  margin-top: 40px;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.imagen-conocenos {
+  position: absolute;
+  margin-top: 180px;
+  left: 80px;
+  width: 900px;
+  height: 500px;
+  object-fit: cover;
+}
+.conocenos {
+  position: absolute;
+  top: 450px;
+  right: 40px;
+  text-align: justify; /*Justifico el texto de nuestro h3*/
+  color: aliceblue;
+  width: 600px;
+}
+
+/*Estilos para el modulo inicio*/
+#fondo-inicio {
+  height: 100px;
+}
+.oferta {
+  position: absolute;
+  top: 150px;
+  right: 40px;
+  width: 450px;
+}
+.comiendo {
+  position: absolute;
+  top: 650px;
+  left: 50px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transform: rotate(-10deg);
+}
+.inicio-frase {
+  position: absolute;
+  top: 450px;
+  left: 200px;
+  font-size: 1.8rem;
+  text-align: justify; /*Justifico el texto de nuestro h3*/
+  color: rgb(0, 0, 0);
+  width: 800px;
+}
+.frase1 {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: justify; /*Justifico el texto de nuestro h3*/
+  color: rgb(219, 49, 19);
+  width: 950px;
+}
+#x-btn-estilo{
+  margin-top: 3vh;
+}
+
+.pregunta-inicio-tipo_usu {
+  position: absolute;
+  margin-top: -12vh;
+  margin-left: 10vw;
+  font-size: 2rem;
+  left: 50px;
+  color: #ffffff;
+  width: 22vw;
+  background-color: #74340f86;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.pregunta-inicio {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.btn-grup-inicio {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /*grosor del borde del boton*/
+  font-size: 1.3vw;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #e4007c;
+  /*hace que elfondo tenga un degradado circular*/
+  border-radius: 17px;
+  width: 7vw;
+  transition: transform 0.5s ease;
 }

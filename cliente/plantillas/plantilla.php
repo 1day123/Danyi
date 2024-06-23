@@ -13,7 +13,9 @@
 </head>
 
 <body>
-  <h1>hola</h1>
+<div class="container-fluid">
+  
+</div>
 
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -24,14 +24,14 @@
             <img src="Cliente/img/logo-principal.png" alt="Dulceria Danyi logo" id="logo">
             <!-- menu de navegacion-->
             <nav class="nav navbar-expand-lg ">
-                <a class="a-color-blanco btn-hover btn-rojo btn-g center top-c" href="cliente/Interfaz-cliente/menu-navegacion-cliente.php">Registrarse</a>
+                <a class="a-color-blanco btn-hover btn-rojo btn-g centrar top-s" href="cliente/Formularios/RegistrarUsuario.php">Registrarse</a>
             </nav>
         </header>
         <!--Titulo - subtitulo del index - boton comenzar-->
         <main class="espacio-left-c ">
             <h1 id="text-Dulces-index" class="txt-blanco txt-g ">Dulces de México</h1>
             <h4 id="text-sub-index" class="txt-blanco txt-m">Descubre la magia del dulce en cada mordisco!</h4>
-            <a id="btn-comenzar-index" class="a-color-blanco btn-hover btn-rojo btn-eg center top-c" href="cliente/Interfaz-cliente/inicio.php">Comenzar</a>
+            <a id="btn-comenzar-index" class="a-color-blanco btn-hover btn-rojo btn-eg centrar top-c" href="cliente/Formularios/Autenticar.php">Comenzar</a>
             </main>
 
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-include("../Servidor/Conexion.php");
+include("../../servidor/Conexion.php");
 
 /*abrimos la bodega temporal del navegador*/
 

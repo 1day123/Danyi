@@ -12,7 +12,10 @@ $ejecutar = mysqli_query($conexion, $consulta);
 
 
 if ($ejecutar) {
-   echo "ya la hisiste";
+    
+    header("Location: ../cliente/interfaz-admin/categorias.php");// Redirige al usuario a la página de inicio
+ 
+
 }else {
     echo "te equivocaste parce";
 }

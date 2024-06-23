@@ -16,7 +16,9 @@ $consulta="INSERT INTO productos (id_producto, id_proveedor, id_categoria, nombr
 $ejecutar=mysqli_query($conexion,$consulta);
 
 if ($ejecutar) {
-  echo "si ejecuto";
+   
+  header("Location: ../cliente/interfaz-admin/inicio.php");// Redirige al usuario a la página de inicio
+ 
      
 }else {
     echo "la regaste";

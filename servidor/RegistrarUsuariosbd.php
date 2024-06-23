@@ -17,9 +17,14 @@ $ejecutar= mysqli_query($conexion,$consulta);
 
 
 if($ejecutar){
-//echo "se inserto correcto crack"; es solo para debuguear
-header("Location: ../Cliente/iniciarsesion.php");
+ 
+    header("Location: ../index.php");// Redirige al usuario a la página de inicio
+ 
 
 }else{
     //echo "tyu primera consulta no te salio"; es solo para debuguear
 }
+
+
+?>
+

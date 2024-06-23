@@ -16,9 +16,11 @@ if (mysqli_num_rows($ejecutar)) {
     $_SESSION['usuario'] = $datos['id_usuario'];
     
     
-    header("Location: ../Cliente/inicio.php");// Redirige al usuario a la página de inicio
+    header("Location: ../cliente/Interfaz-admin/inicio.php");// Redirige al usuario a la página de inicio
  
 } else {
     echo "te fallo algo master";
 }
 ?>
+
+

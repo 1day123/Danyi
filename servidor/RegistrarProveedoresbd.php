@@ -24,7 +24,11 @@ VALUES (NULL, $id_usuario_generado, $repartidor)";/* esta consulta inserta el us
 $ejecutar2=mysqli_query($conexion,$consulta2);
 
 if ($ejecutar2) {
-    echo "si consulta la segunda";
+   
+     
+    header("Location: ../cliente/interfaz-admin/inicio.php");// Redirige al usuario a la página de inicio
+ 
+    
 }else {
     echo "Aun no dormiremos patricio";
 }
