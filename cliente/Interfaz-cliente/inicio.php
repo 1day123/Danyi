@@ -32,7 +32,11 @@
             ¿Que vas a comprar hoy?</h4>
 
         <!-- frase-promocion-inicio -->
+<<<<<<< HEAD
         <img src="../videos/fondo-inicio.jpg" class="imagen-inicio">
+=======
+        <img src="../img/fondo-inicio.jpg" class="imagen-inicio">
+>>>>>>> 2072517d17c7595946e7e4ace434f7f57b478ca0
         <img src="../img/comiendo.jpg" alt="" class="comiendo">
         <h2 class="frase1">¡Encuentra la tradición que más te antoje en nuestros productos!</h2>
         <h3 class="inicio-frase">Ofrecemos una amplia variedad de dulces que abarcan desde

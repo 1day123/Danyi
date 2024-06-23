@@ -560,11 +560,19 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
 }
 #btn-registrar-repartidores {
   position: absolute;
+<<<<<<< HEAD
   top: 600px;
   left: 65px;
 }
 .avatar-repartidor {
   top: 350px;
+=======
+  top: 620px;
+  left: 65px;
+}
+.avatar-repartidor {
+  top: 380px;
+>>>>>>> 2072517d17c7595946e7e4ace434f7f57b478ca0
   right: 0px;
 }
 #btn-registrar-proveedores {
@@ -599,7 +607,11 @@ dependiendo del ancho de nuestra pantalla, como una especie de if*/
   margin-top: 3vh;
   height: 40px;
   width: 270px;
+<<<<<<< HEAD
   font-size: 1rem;
+=======
+  font-size: 1.3rem;
+>>>>>>> 2072517d17c7595946e7e4ace434f7f57b478ca0
 }
 
 /*clases para mi menu navegacion*/

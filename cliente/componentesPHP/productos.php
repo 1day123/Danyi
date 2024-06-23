@@ -1,4 +1,8 @@
+<<<<<<< HEAD
           <?php
+=======
+<?php
+>>>>>>> 2072517d17c7595946e7e4ace434f7f57b478ca0
             include("../../servidor/Conexion.php");
             $id_categoria = $_POST['id_categoria'];
             $consulta = "SELECT * FROM productos WHERE id_categoria = $id_categoria";
